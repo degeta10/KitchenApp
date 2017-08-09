@@ -92,10 +92,12 @@
      <Compile Include="Assets\Scripts\Autofcous.cs" />
      <Compile Include="Assets\Scripts\DataInserter.cs" />
      <Compile Include="Assets\Scripts\DataLoader.cs" />
+     <Compile Include="Assets\Scripts\LoadAsync.cs" />
      <Compile Include="Assets\Scripts\Login.cs" />
      <Compile Include="Assets\Scripts\ModelRotate.cs" />
      <Compile Include="Assets\Scripts\ModelSwap.cs" />
      <Compile Include="Assets\Scripts\ModelTranslate.cs" />
+     <Compile Include="Assets\Scripts\NativeShareScript.cs" />
      <Compile Include="Assets\Scripts\ProjectSelector.cs" />
      <Compile Include="Assets\Scripts\SwipeControl.cs" />
      <Compile Include="Assets\Scripts\joystick.cs" />
@@ -176,7 +178,7 @@
  <HintPath>D:/Unity 3d/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>D:/GAMING PROJECT/KitchenApp/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>E:/Github Repository/KitchenApp/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>D:/Unity 3d/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

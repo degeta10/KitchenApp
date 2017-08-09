@@ -1,9 +1,8 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
+﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ModelSwap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NativeShareScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\ModelSwap.cs" Line="39" Column="34" />
-      <File FileName="Assets\Scripts\skip.cs" Line="14" Column="27" />
+      <File FileName="Assets\Scripts\NativeShareScript.cs" Line="16" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

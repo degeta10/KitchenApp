@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class skip : MonoBehaviour
 {
-	public float WaitS=1.0f;
+	public float WaitS=0f;
 	void Start () {
 		StartCoroutine(Load());
 	}

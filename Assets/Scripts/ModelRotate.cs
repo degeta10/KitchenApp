@@ -4,19 +4,50 @@ using UnityEngine;
 
 public class ModelRotate : MonoBehaviour {
 	
-	private bool _rotateside;
+	private bool _rotatelside;
+	private bool _rotaterside;
 	private bool _rotateup;
+	private bool _rotatedown;
 	public GameObject model;
 
-	public void OnPressS()
+	#region Leftsidee
+	public void OnPressLS()
 	{
-		_rotateside = true;
+		_rotatelside = true;
+	}
+	public void OnReleaseLS()
+	{
+		_rotatelside = false;
+	}
+	public void RotateLeftSide()
+	{	
+		if(_rotatelside)
+		{
+			model.transform.Rotate(Vector3.up, 1f, Space.World);
+		}
+	}
+ 	#endregion Leftside
+
+	#region Rightside
+	public void OnPressRS()
+	{
+		_rotaterside = true;
 	}
 
-	public void OnReleaseS()
+	public void OnReleaseRS()
 	{
-		_rotateside = false;
+		_rotaterside = false;
 	}
+	public void RotateRightSide()
+	{	
+		if(_rotaterside)
+		{
+			model.transform.Rotate(Vector3.down, 1f, Space.World);
+		}
+	}
+	#endregion Rightside
+
+	#region Up
 	public void OnPressU()
 	{
 		_rotateup = true;
@@ -26,13 +57,6 @@ public class ModelRotate : MonoBehaviour {
 	{
 		_rotateup = false;
 	}
-	public void RotateSide()
-	{	
-		if(_rotateside)
-		{
-			model.transform.Rotate(Vector3.up, 1f, Space.World);
-		}
-	}
 	public void RotateUp()
 	{	
 		if(_rotateup)
@@ -40,9 +64,32 @@ public class ModelRotate : MonoBehaviour {
 			model.transform.Rotate(Vector3.right, 1f, Space.World);
 		}
 	}
+	#endregion Up
+
+	#region Down
+	public void OnPressD()
+	{
+		_rotatedown = true;
+	}
+
+	public void OnReleaseD()
+	{
+		_rotatedown = false;
+	}
+	public void RotateDown()
+	{	
+		if(_rotatedown)
+		{
+			model.transform.Rotate(Vector3.left, 1f, Space.World);
+		}
+	}
+	#endregion Down
+
 	void Update()
 	{
-		RotateSide ();
+		RotateLeftSide ();
 		RotateUp ();
+		RotateDown ();
+		RotateRightSide ();
 	}
 }

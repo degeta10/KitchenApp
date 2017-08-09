@@ -127,10 +127,10 @@
  <HintPath>D:/Unity 3d/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions.Editor">
- <HintPath>D:/GAMING PROJECT/KitchenApp/Assets/Vuforia/Editor/Scripts/Vuforia.UnityExtensions.Editor.dll</HintPath>
+ <HintPath>E:/Github Repository/KitchenApp/Assets/Vuforia/Editor/Scripts/Vuforia.UnityExtensions.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>D:/GAMING PROJECT/KitchenApp/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>E:/Github Repository/KitchenApp/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>D:/Unity 3d/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

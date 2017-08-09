@@ -10,12 +10,17 @@ public class ModelSwap : MonoBehaviour
 {
 	public GameObject[] model;
 	public Button[] button;
-	private Rigidbody rb;
 	public int n=-1;
 	public float speed=5.0f;
+
+	private Rigidbody rb;
 	private float rotx=0.0f;
 	private float roty=0.0f;
 	private TrackableBehaviour image;
+	private bool _rotatelside;
+	private bool _rotaterside;
+	private bool _rotateup;
+	private bool _rotatedown;
 
 	void Start () 
 	{	
@@ -101,16 +106,100 @@ public class ModelSwap : MonoBehaviour
 			}
 		}
 	}
-	public void Joystick()
+	/*public void Joystick()
 	{
 		rotx-=CrossPlatformInputManager.GetAxis("Horizontal")*speed;
 		roty+=CrossPlatformInputManager.GetAxis("Vertical")*speed;
 		model[n].transform.eulerAngles = new Vector3 (roty,rotx,0f);
 		model[n+5].transform.eulerAngles = new Vector3 (roty,rotx,0f);
+	}*/
+
+	public void OnPressLS()
+	{
+		_rotatelside = true;
 	}
+	public void OnReleaseLS()
+	{
+		_rotatelside = false;
+	}
+	public void RotateLeftSide()
+	{	
+		if(_rotatelside)
+		{
+			model[n].transform.Rotate(Vector3.up, 1f, Space.World);
+			model[n+5].transform.Rotate(Vector3.up, 1f, Space.World);
+		}
+	}
+
+
+
+	public void OnPressRS()
+	{
+		_rotaterside = true;
+	}
+
+	public void OnReleaseRS()
+	{
+		_rotaterside = false;
+	}
+	public void RotateRightSide()
+	{	
+		if(_rotaterside)
+		{
+			model[n].transform.Rotate(Vector3.down, 1f, Space.World);
+			model[n+5].transform.Rotate(Vector3.down, 1f, Space.World);
+		}
+	}
+
+
+
+	public void OnPressU()
+	{
+		_rotateup = true;
+	}
+
+	public void OnReleaseU()
+	{
+		_rotateup = false;
+	}
+	public void RotateUp()
+	{	
+		if(_rotateup)
+		{
+			model[n].transform.Rotate(Vector3.right, 1f, Space.World);
+			model[n+5].transform.Rotate(Vector3.right, 1f, Space.World);
+		}
+	}
+
+
+
+	public void OnPressD()
+	{
+		_rotatedown = true;
+	}
+
+	public void OnReleaseD()
+	{
+		_rotatedown = false;
+	}
+	public void RotateDown()
+	{	
+		if(_rotatedown)
+		{
+			model[n].transform.Rotate(Vector3.left, 1f, Space.World);
+			model[n+5].transform.Rotate(Vector3.left, 1f, Space.World);
+		}
+	}
+
+
 	public void Update()
 	{
-		Joystick ();
+		//Joystick ();
+		RotateLeftSide();
+		RotateUp ();
+		RotateDown ();
+		RotateRightSide ();
 		BackButton ();
+
 	}
 }
